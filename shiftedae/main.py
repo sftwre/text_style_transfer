@@ -45,7 +45,7 @@ import os
 import importlib
 import numpy as np
 import tensorflow as tf
-import texar as tx
+import texar.tf as tx
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 
@@ -58,6 +58,7 @@ flags.DEFINE_string('config', 'config', 'The config to use.')
 FLAGS = flags.FLAGS
 
 config = importlib.import_module(FLAGS.config)
+
 
 def _main(_):
     # Data
