@@ -59,6 +59,8 @@ FLAGS = flags.FLAGS
 
 config = importlib.import_module(FLAGS.config)
 
+# logs the device tensorflow operations are assigned to
+tf.debugging.set_log_device_placement(True)
 
 def _main(_):
     # Data
